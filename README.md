@@ -1,1 +1,1 @@
-### Deskinar is a chatting service for answers
+### Deskinar is a chatting service for Q&A
