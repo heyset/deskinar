@@ -5,6 +5,8 @@ import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Pusher from 'pusher-js';
 
+import ThreadCard from '../components/ThreadCard';
+
 export default function Home() {
   const [ newThreadInput, setNewThreadInput ] = useState('');
   const [ threadHistory, setThreadHistory ] = useState([]);
@@ -67,11 +69,7 @@ export default function Home() {
       </form>
 
       <ol>
-        { threadHistory.map(({ id, op }) => 
-        <li key={ id }>
-          <p>{ op.message }</p>
-          <p>{ op.author }</p>
-        </li>) }
+        { threadHistory.map(({ id, op }) => <ThreadCard key={ id } op={ op } />) }
       </ol>
     </main>
   );
