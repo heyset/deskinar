@@ -62,6 +62,7 @@ app.prepare().then(() => {
     const thread = req.body;
 
     thread.id = uuid();
+    thread.op.timestamp = new Date();
 
     threadHistory.push(req.body);
 
