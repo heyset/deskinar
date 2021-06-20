@@ -1,14 +1,11 @@
 import React from 'react';
-import ThreadOP from './ThreadOP';
+import ThreadSub from './ThreadSub';
 
 export default function ThreadCard({ op, id }) {
   return (
-    <ThreadOP
+    <ThreadSub
       details={ op }
-    >
-      <li>filho</li>
-      <li>filho</li>
-      <li>filho</li>
-    </ThreadOP>
+      replies={ [{author: 'bah', message: 'sein'}] }
+    />
   )
 }
